@@ -11,8 +11,8 @@ Also follow the rest of the setup for both ios and android in order to have your
 ## Installation
 
 ```
-$ git clone git@github.com:jarretmoses/react-native-redux-example.git
-$ cd react-native-redux-example
+$ git clone git@github.com:narasingh/Retina.git
+$ cd Retina
 $ yarn
 ```
 
