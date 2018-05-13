@@ -24,7 +24,7 @@ class MainScreen extends React.Component {
         source={BG_IMAGE}
       >
         <View>
-          <Text style={{ color: '#fff', textAlign: 'center' }}>App initialize</Text>
+          <Text style={{ color: '#fff', textAlign: 'center' }}>App Loaded</Text>
         </View>
       </ImageBackground>
     );

@@ -1,9 +1,10 @@
+import React from 'react';
 import { DrawerNavigator, StackNavigator } from 'react-navigation';
 import * as _ from 'lodash';
-import { withRkTheme } from 'react-native-ui-kitten';
-import Icon from 'react-native-elements';
 
+// custom
 import * as Screens from '../containers/screens';
+import NavBar from '../components/NavBar';
 
 export const Routes = [
   {
@@ -43,14 +44,14 @@ export const Routes = [
   },
 ];
 
-const ThemedNavigationBar = withRkTheme(NavBar);
+const ThemedNavigationBar = NavBar;
 
 const main = {};
 const flatRoutes = {};
 _.each(Routes, (route, index) => {
   const wrapToRoute = (r) => {
     return {
-      screen: withRkTheme(r.screen),
+      screen: r.screen,
       title: route.title,
     };
   };
@@ -73,7 +74,7 @@ const DrawerRoutes = Object.keys(main).reduce((routes, name) => {
       navigationOptions: ({ navigation, screenProps }) => ({
         gesturesEnabled: false,
         header: (headerProps) => {
-          return <ThemedNavigationBar navigation={navigation} headerProps={headerProps}/>
+          return (<ThemedNavigationBar navigation={navigation} headerProps={headerProps} />);
         },
       }),
     }),
